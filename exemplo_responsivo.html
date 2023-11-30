@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Seletores CSS</title>
+    <style>
+        /* Estilo padrão para telas maiores */
+        nav ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          flex-direction: row; /* Layout horizontal por padrão */
+          justify-content: space-around;
+          background-color: #333;
+          color: white;
+        }
+
+        nav a {
+          text-decoration: none;
+          color: white;
+        }
+
+        body {
+          display: flex;
+          flex-direction: column;
+          align-items: center; /* Centraliza conteúdo na tela */
+        }
+
+        section {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          max-width: 800px; /* Define uma largura máxima para a seção */
+          width: 100%;
+        }
+
+        article, aside, nav {
+          width: calc(50% - 10px); /* 50% da largura da seção com espaço entre eles */
+          margin: 5px; /* Espaço entre os elementos */
+        }
+
+        /* Media query para telas menores (max-width: 600px) */
+        @media only screen and (max-width: 600px) {
+          nav ul {
+            flex-direction: column; /* Altera para layout vertical em telas menores */
+          }
+
+          article, aside, nav {
+            width: 100%; /* Ocupa toda a largura quando em coluna */
+          }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Título Principal</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" class="link">Home</a></li>
+            <li><a href="#" class="link">Sobre</a></li>
+            <li><a href="#" class="link">Contato</a></li>
+        </ul>
+    </nav>
+
+    <section id="conteudo">
+        <article>
+            <h2>Artigo Principal</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero ac tincidunt consequat...</p>
+        </article>
+
+        <aside>
+            <h3>Conteúdo Adicional</h3>
+            <p>Este é um conteúdo adicional relacionado ao artigo principal.</p>
+        </aside>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Exemplo de Seletores CSS</p>
+    </footer>
+
+</body>
+</html>
